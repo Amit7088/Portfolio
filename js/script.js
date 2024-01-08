@@ -1,3 +1,25 @@
+const form =document.querySelector('form');
+
+function sendEmail(){
+    Email.send({
+        Host: "amitchandola2002@gmail.com",
+        Username: "amitchandola2002@gmail.com",
+        Password: "A558262430CC32B439657A78197DFE602BA1",
+        To: 'amitchandola2002@gmail.com',
+        From: "amitchandola2002@gmail.com",
+        Subject: "This is the subject",
+        Body: "And this is the body"
+    }).then(
+        message=>alert(message)
+    );
+}
+
+form.addEventListener("submit", (e)=>{
+    e.preventDefault();
+
+    sendEmail();
+})
+
 //toggle icon navbar
 let menuIcon= document.querySelector('#menu-icon');
 let navbar = document.querySelector('.navbar');
